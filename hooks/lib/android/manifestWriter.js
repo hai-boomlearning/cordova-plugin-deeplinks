@@ -72,6 +72,8 @@ function removeOldOptions(manifestData) {
  *                            Changes applied to the passed object.
  */
 function removeIntentFiltersFromActivity(activity) {
+  console.log(activity);
+  return; 
   var oldIntentFilters = activity['intent-filter'];
   var newIntentFilters = [];
 
