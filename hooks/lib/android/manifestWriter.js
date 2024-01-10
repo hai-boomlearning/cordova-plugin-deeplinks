@@ -36,7 +36,7 @@ function writePreferences(cordovaContext, pluginPreferences) {
   }
 
   // remove old intent-filters
-  cleanManifest = removeOldOptions(manifestSource);
+  // cleanManifest = removeOldOptions(manifestSource);
 
   // inject intent-filters based on plugin preferences
   updatedManifest = injectOptions(cleanManifest, pluginPreferences);
@@ -72,8 +72,6 @@ function removeOldOptions(manifestData) {
  *                            Changes applied to the passed object.
  */
 function removeIntentFiltersFromActivity(activity) {
-  console.log(activity);
-  return; 
   var oldIntentFilters = activity['intent-filter'];
   var newIntentFilters = [];
 
