@@ -37,6 +37,7 @@ function writePreferences(cordovaContext, pluginPreferences) {
 
   // remove old intent-filters
   // cleanManifest = removeOldOptions(manifestSource);
+  cleanManifest = manifestSource;
 
   // inject intent-filters based on plugin preferences
   updatedManifest = injectOptions(cleanManifest, pluginPreferences);
