@@ -72,8 +72,12 @@ function removeOldOptions(manifestData) {
  *                            Changes applied to the passed object.
  */
 function removeIntentFiltersFromActivity(activity) {
-  console.log(activity);
-  return;
+  // only remove intent-filters from the main activity
+  if (activity['$']['android:name'] != 'MainActivity')
+  {
+    return;
+  }
+    
   var oldIntentFilters = activity['intent-filter'];
   var newIntentFilters = [];
 
